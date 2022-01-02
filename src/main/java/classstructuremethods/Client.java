@@ -30,8 +30,8 @@ public class Client {
         this.address = address;
     }
 
-    public void migrate(String newAddress) {
-        this.address = newAddress;
+    public void migrate(String address) {
+        this.address = address;
     }
 
 
