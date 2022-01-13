@@ -1,5 +1,8 @@
 package cmdarguments.verse;
 
+//Gyakorlati feladat - Verssor összefűzése szavakból
+//        A cmdarguments.verse.VerseMain osztály main() metódusának parancssori paraméterként add át egy kedvenc verssorodat szavanként! A main() metódusban először írd ki a konzolra a verssort! Majd írd ki a szavakat fordított sorrenben, szóközökkel elválasztva!
+
 public class VerseMain {
 
     public static void main(String[] args) {
