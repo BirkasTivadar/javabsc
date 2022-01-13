@@ -16,12 +16,12 @@ public class Freezer {
         meals.add("vaj");
         meals.add("tej");
 
-        System.out.println(meals.toString());
+        System.out.println(meals);
         System.out.println(meals.size());
 
         meals.remove("vaj");
         meals.remove("narancs");
-        System.out.println(meals.toString());
+        System.out.println(meals);
         System.out.println(meals.size());
     }
 
