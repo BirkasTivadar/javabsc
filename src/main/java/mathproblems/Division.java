@@ -43,7 +43,7 @@ public class Division {
             System.out.print(numbers[1] + " ");
             for (int i = 2; i < numbers.length; i++) {
                 int actualNumber = numbers[i];
-                if (actualNumber % i == 0) {
+                if ((actualNumber % i) == 0) {
                     System.out.print(actualNumber + " ");
                 }
             }
