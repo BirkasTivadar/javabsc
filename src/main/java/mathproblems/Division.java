@@ -3,6 +3,8 @@ package mathproblems;
 //Gyakorlati feladatok
 //        A mathproblems.Division osztályba dolgozz!
 
+import org.jetbrains.annotations.NotNull;
+
 public class Division {
 
 //    Gyakorlati feladat - Egy szám osztói
@@ -38,7 +40,7 @@ public class Division {
 //    Tehát ha például a következő tömb: {2, 5, 23, 56, -36, 45, 78, 14, -8, 4, 10}, akkor ez kerüljön a konzolra: 5 -36 45 78 14 -8 10
 //    Az osztály main() metódusában teszteld a metódus működését!
 
-    public void getRightNumbers(int[] numbers) {
+    public void getRightNumbers(int @NotNull [] numbers) {
         if (numbers.length > 1) {
             System.out.print(numbers[1] + " ");
             for (int i = 2; i < numbers.length; i++) {
