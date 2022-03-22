@@ -17,10 +17,16 @@ package introjunit;
 public class Gentleman {
 
     public String sayHello(String name) {
+//        Gyakorlati feladat - Tesztlefedettség mérése
+//        Implementáld, hogy ha a sayHello() metódus null paramétert kap, a visszaadott szöveg Hello Anonymous legyen! Futtasd le a tesztlefedettség mérést, és nézd meg, hogy hogyan jelzi a fejlesztőeszköz, hogy az új ág nem lett lefedve! Implementáld a megfelelő tesztesetet a GentlemanTest osztályban, és futtasd le újra a lefedettség mérést!
         if (name == null) {
             return "Hello Anonymus";
         }
         return "Hello " + name;
+//    Gyakorlati feladat - Hibás teszt
+//        Rontsd el először a programot, hogy hibás üzenetet adjon vissza! Hogy jelzi a JUnit ezt? Rontsd el a tesztesetet, hogy hibás legyen, amire ellenőriz! Hogyan jelzi ezt a JUnit a futtatáskor?
+//        return "Hell " + name;
     }
 
 }
+
