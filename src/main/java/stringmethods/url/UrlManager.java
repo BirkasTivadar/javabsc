@@ -42,49 +42,49 @@ public class UrlManager {
 
     public String getProperty(String key) {
         String[] properties = query.split("&");
-        for (String s : properties) {
-            String[] keyValue = s.split("=");
-            if (keyValue[0].equals(key)) {
-                return keyValue[1];
+        for (String str : properties) {
+            String[] prop = str.split("=");
+            if (prop[0].equals(key)) {
+                return prop[1];
             }
         }
         return null;
     }
 
     private void findHostFromUrl(String url) {
-        int startHostIndex = url.indexOf("://") + 3;
-        int endHostIndex = url.indexOf(":", startHostIndex);
-        if (endHostIndex < 0) {
-            endHostIndex = url.indexOf("/", startHostIndex);
+        int startIndex = url.indexOf("://") + 3;
+        int endIndex = url.indexOf(":", startIndex);
+        if (endIndex < 0) {
+            endIndex = url.indexOf("/", startIndex);
         }
-        this.host = endHostIndex < 0 ? url.substring(startHostIndex).toLowerCase() : url.substring(startHostIndex, endHostIndex).toLowerCase();
+        this.host = endIndex < 0 ? url.substring(startIndex).toLowerCase() : url.substring(startIndex, endIndex).toLowerCase();
 
     }
 
     private void findPathFromUrl(String url) {
         int index = url.indexOf("://") + 3;
-        int startPathIndex = url.indexOf("/", index);
-        if (startPathIndex < 0) {
+        int startIndex = url.indexOf("/", index);
+        if (startIndex < 0) {
             this.path = "";
             return;
         }
-        int endPathIndex = url.indexOf("?");
-        this.path = endPathIndex < 0 ? url.substring(startPathIndex) : url.substring(startPathIndex, endPathIndex);
+        int endIndex = url.indexOf("?");
+        this.path = endIndex < 0 ? url.substring(startIndex) : url.substring(startIndex, endIndex);
     }
 
     private void findQueryFromUrl(String url) {
-        int startQueryIndex = url.indexOf("?");
-        this.query = startQueryIndex < 0 ? "" : url.substring(startQueryIndex + 1);
+        int startIndex = url.indexOf("?");
+        this.query = startIndex < 0 ? "" : url.substring(startIndex + 1);
     }
 
     private void findPortFromUrl(String url) {
-        int index = url.indexOf("://");
-        int portStartIndex = url.indexOf(":", index + 1);
-        if (portStartIndex < 0) {
+        int startIndex = url.indexOf("://") + 3;
+        startIndex = url.indexOf(":", startIndex);
+        if (startIndex < 0) {
             return;
         }
-        int portEndIndex = url.indexOf("/", portStartIndex);
-        this.port = portEndIndex < 0 ? Integer.valueOf(url.substring(portStartIndex + 1)) : Integer.valueOf(url.substring(portStartIndex + 1, portEndIndex));
+        int portEndIndex = url.indexOf("/", startIndex);
+        this.port = portEndIndex < 0 ? Integer.valueOf(url.substring(startIndex + 1)) : Integer.valueOf(url.substring(startIndex + 1, portEndIndex));
     }
 
     private void findProtocolFromUrl(String url) {
