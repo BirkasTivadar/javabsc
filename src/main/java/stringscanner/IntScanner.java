@@ -10,7 +10,6 @@ public class IntScanner {
     public String convertInts(String ints) {
         StringBuilder sb;
         try (Scanner intScan = new Scanner(ints).useDelimiter(";")) {
-
             sb = new StringBuilder();
             while (intScan.hasNext()) {
                 int number = Integer.parseInt(intScan.next());

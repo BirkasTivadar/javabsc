@@ -15,7 +15,6 @@ public class StringScanner {
         String sentence = scanner.nextLine();
 
         try (Scanner wordsScanner = new Scanner(sentence)) {
-
             while (wordsScanner.hasNext()) {
                 String word = wordsScanner.next();
                 if (word.contains(",") || word.contains(".")) {
@@ -40,6 +39,5 @@ public class StringScanner {
                 System.out.println(sentencePart);
             }
         }
-
     }
 }
