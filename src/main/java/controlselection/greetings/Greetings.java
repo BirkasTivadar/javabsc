@@ -7,27 +7,16 @@ package controlselection.greetings;
 
 public class Greetings {
 
-    public void greetingByTime(int hour, int minute) {
+    public String greet(int hour, int minute) {
+        String result;
         int timeInMinutes = hour * 60 + minute;
-        if (timeInMinutes <= 300) {
-            System.out.println("Jó éjt");
-        } else if (timeInMinutes <= 540) {
-            System.out.println("Jó reggelt");
-        } else if (timeInMinutes <= 1110) {
-            System.out.println("Jó napot");
-        } else if (timeInMinutes <= 1200) {
-            System.out.println("Jó estét");
-        } else {
-            System.out.println("Jó éjt");
-        }
-    }
 
-    public static void main(String[] args) {
-        Greetings greetings = new Greetings();
-        greetings.greetingByTime(4, 30);
-        greetings.greetingByTime(6, 25);
-        greetings.greetingByTime(14, 38);
-        greetings.greetingByTime(18, 35);
-        greetings.greetingByTime(23, 30);
+        if (timeInMinutes <= 300) result = "jó éjt";
+        else if (timeInMinutes <= 540) result = "jó reggelt";
+        else if (timeInMinutes <= 1110) result = "jó napot";
+        else if (timeInMinutes <= 1200) result = "jó estét";
+        else result = "jó éjt";
+
+        return result;
     }
 }
