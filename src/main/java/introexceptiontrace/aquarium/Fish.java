@@ -45,7 +45,6 @@ public class Aquarium {
         Indítsd el az alkalmazást! Hol keletkezik a kivétel és miért? Kövesd vissza a hívási láncot!
 */
 
-
 public class Fish {
 
     private String type;
