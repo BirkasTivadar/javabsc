@@ -34,7 +34,6 @@ public class StudentTest {
 
     @Rule
     public ExpectedException exception = ExpectedException.none();
-
     @Test
     public void testAddNoteWithWrongNoteRule() {
         exception.expect(IllegalArgumentException.class);

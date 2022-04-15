@@ -31,7 +31,7 @@ public class TankTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testModifyAngleeWithWrongNote() {
+    public void testModifyAngleeWithWrongAngle() {
         tank.modifyAngle(50);
         tank.modifyAngle(50);
     }
@@ -40,14 +40,14 @@ public class TankTest {
     public ExpectedException exception = ExpectedException.none();
 
     @Test
-    public void testModifyAngleWithWrongNoteRule() {
+    public void testModifyAngleWithWrongAngleRule() {
         exception.expect(IllegalArgumentException.class);
         tank.modifyAngle(10);
         tank.modifyAngle(-100);
     }
 
     @Test
-    public void testModifyAngleWithWrongNoteAssertThrows() {
+    public void testModifyAngleWithWrongAngleAssertThrows() {
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> tank.modifyAngle(100));
         assertEquals("Angle of gunpipe must be between -80 and 80", iae.getMessage());
     }
