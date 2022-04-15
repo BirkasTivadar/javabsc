@@ -15,7 +15,10 @@ public class Underground {
             ioException.printStackTrace();
         }
 
-        String dailySchedule = operations.getDailySchedule(wagonNumbers);
+        String dailySchedule = null;
+        if (wagonNumbers != null) {
+            dailySchedule = operations.getDailySchedule(wagonNumbers);
+        }
         System.out.println(dailySchedule);
     }
 }
