@@ -30,7 +30,7 @@ public class Shopping {
         try {
             shoppingList = Files.readAllLines(path);
         } catch (IOException ioException) {
-            System.out.printf("File can not read");
+            System.out.println("File can not read");
         }
 
         System.out.println(shoppingList);
