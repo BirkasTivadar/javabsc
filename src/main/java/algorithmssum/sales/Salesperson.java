@@ -10,8 +10,8 @@ Gyakorlati feladat - Értékesítők számai
 */
 public class Salesperson {
 
-    private String name;
-    private int amount;
+    private final String name;
+    private final int amount;
 
     public Salesperson(String name, int amount) {
         this.name = name;

@@ -11,9 +11,9 @@ Gyakorlati feladat - Összes jóváírás
 */
 
 public class Transaction {
-    private String accountNumber;
-    private TransactionOperation transactionOperation;
-    private int amount;
+    private final String accountNumber;
+    private final TransactionOperation transactionOperation;
+    private final int amount;
 
     public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount) {
         this.accountNumber = accountNumber;
