@@ -30,7 +30,7 @@ public class Holiday {
         try {
             holiday = Files.readAllLines(path);
         } catch (IOException ioException) {
-            System.out.println("File can not read");
+            System.out.println("Can not read file");
         }
 
         System.out.println(holiday);
