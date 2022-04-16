@@ -17,8 +17,8 @@ public class BooksTest {
 
     @Test
     public void testWriteBooks() throws IOException {
-        Books books = new Books();
         Path path = temporaryFolder.newFile("books.txt").toPath();
+        Books books = new Books();
         books.readBooks();
 
         books.writeBooks(path);
