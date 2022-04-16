@@ -1,5 +1,6 @@
 package introexceptionwritefiletestjunit5;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
@@ -25,6 +26,6 @@ class BooksTest {
 
         List<String> result = Files.readAllLines(path);
 
-        assertEquals(result, books.getBookList());
+        Assertions.assertEquals(result, books.getBookList());
     }
 }
