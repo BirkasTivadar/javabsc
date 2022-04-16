@@ -40,9 +40,7 @@ public class Books {
 
         for (String s : books) {
             String[] bookArr = s.split(";");
-            StringBuilder sb = new StringBuilder(bookArr[2]).append(": ").append(bookArr[1]);
-            result.add(sb.toString());
-
+            result.add(bookArr[2] + ": " + bookArr[1]);
         }
         return result;
     }
