@@ -10,8 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-
 class BooksTest {
     @TempDir
     File temporaryFolder;
