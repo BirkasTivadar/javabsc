@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 public class StudentTest {
-    private Student student = new Student();
+    private final Student student = new Student();
 
     @Test
     public void testAddNote() {

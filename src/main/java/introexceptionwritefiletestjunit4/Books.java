@@ -24,12 +24,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Books {
-    List<String> books = new ArrayList<>();
+    List<String> bookList = new ArrayList<>();
 
     public void readBooks() {
         Path path = Path.of("src/test/resources/books.txt");
         try {
-            books = Files.readAllLines(path);
+            bookList = Files.readAllLines(path);
         } catch (IOException ioe) {
             throw new IllegalStateException("Can not read file", ioe);
         }
@@ -38,11 +38,9 @@ public class Books {
     public List<String> getBookList() {
         List<String> result = new ArrayList<>();
 
-        for (String s : books) {
+        for (String s : bookList) {
             String[] bookArr = s.split(";");
-            StringBuilder sb = new StringBuilder(bookArr[2]).append(": ").append(bookArr[1]);
-            result.add(sb.toString());
-
+            result.add(bookArr[2] + ": " + bookArr[1]);
         }
         return result;
     }
