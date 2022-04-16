@@ -54,6 +54,8 @@ public class PaulStreetBoys {
             ise.getCause().printStackTrace();
         }
 
-        paulStreetBoys.printNames(names);
+        if (names != null) {
+            paulStreetBoys.printNames(names);
+        }
     }
 }
