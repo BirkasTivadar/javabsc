@@ -2,7 +2,8 @@ package algorithmsdecision;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PrimeTest {
 
@@ -10,11 +11,11 @@ class PrimeTest {
     void testIsPrime() {
         Prime prime = new Prime();
 
-        assertEquals(false, prime.isPrime(-1));
-        assertEquals(false, prime.isPrime(0));
-        assertEquals(false, prime.isPrime(1));
-        assertEquals(true, prime.isPrime(2));
-        assertEquals(false, prime.isPrime(27));
-        assertEquals(true, prime.isPrime(29));
+        assertFalse(prime.isPrime(-1));
+        assertFalse(prime.isPrime(0));
+        assertFalse(prime.isPrime(1));
+        assertTrue(prime.isPrime(2));
+        assertFalse(prime.isPrime(27));
+        assertTrue(prime.isPrime(29));
     }
 }
