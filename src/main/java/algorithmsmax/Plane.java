@@ -25,5 +25,7 @@ public class Plane {
             }
         }
         return max;
+//        String[] mapArr = map.split("1");
+//        return Arrays.stream(mapArr).mapToInt(String::length).max().getAsInt();
     }
 }
