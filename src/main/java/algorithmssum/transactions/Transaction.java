@@ -10,28 +10,7 @@ Gyakorlati feladat - Összes jóváírás
         Hozz létre egy TransactionSumCalculator osztályt, amelyben van egy int sumAmountOfCreditEntries(List<Transaction> transactions) metódus, amely összegzi a credit tranzakciók összegét.
 */
 
-public class Transaction {
-    private final String accountNumber;
-    private final TransactionOperation transactionOperation;
-    private final int amount;
-
-    public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount) {
-        this.accountNumber = accountNumber;
-        this.transactionOperation = transactionOperation;
-        this.amount = amount;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public TransactionOperation getTransactionOperation() {
-        return transactionOperation;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
+public record Transaction(String accountNumber, TransactionOperation transactionOperation, int amount) {
 
     public boolean isCredit() {
         return transactionOperation == TransactionOperation.CREDIT;

@@ -10,8 +10,9 @@ import java.util.List;
 public class School {
 
     public int getNumberOfStudents(List<Integer> headcounts) {
-        int sum = 0;
-        for (int number : headcounts) sum += number;
-        return sum;
+        return headcounts.stream().mapToInt(h -> h).sum();
+//        int sum = 0;
+//        for (int number : headcounts) sum += number;
+//        return sum;
     }
 }

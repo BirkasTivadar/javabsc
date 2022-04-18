@@ -24,7 +24,6 @@ public class Plane {
                 max = count;
             }
         }
-
         return max;
     }
 }
