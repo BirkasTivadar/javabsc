@@ -28,7 +28,7 @@ public class ArrayMain {
         Boolean[] sixBool = new Boolean[6];
 
         for (int i = 0; i < 6; i++) {
-            sixBool[i] = i == 0 ? false : !sixBool[i - 1];
+            sixBool[i] = i != 0 && !sixBool[i - 1];
         }
 
         for (boolean bool : sixBool) {
