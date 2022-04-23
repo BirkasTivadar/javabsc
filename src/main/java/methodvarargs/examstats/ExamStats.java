@@ -15,13 +15,10 @@ public boolean hasAnyFailed(int limitInPercent, int... results)
 import java.util.Arrays;
 
 public class ExamStats {
-
     private final int maxPoints;
-
     public ExamStats(int maxPoints) {
         this.maxPoints = maxPoints;
     }
-
     public int getNumberOfTopGrades(int limitInPercent, int... results) {
         if (results == null || results.length == 0)
             throw new IllegalArgumentException("Number of results must not be empty!");
