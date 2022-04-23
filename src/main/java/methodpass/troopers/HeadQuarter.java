@@ -9,6 +9,7 @@ A HeadQuarter tartalmazza a gyalogosok listáját. Ezen osztály irányítja ők
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class HeadQuarter {
 
@@ -19,7 +20,8 @@ public class HeadQuarter {
     }
 
     public void addTrooper(Trooper trooper) {
-        if (trooper == null) throw new IllegalArgumentException("Trooper must not be null.");
+//        if (trooper == null) throw new IllegalArgumentException("Trooper must not be null.");
+        Objects.requireNonNull(trooper, "Trooper must not be null.");
         troopers.add(trooper);
     }
 
@@ -56,7 +58,8 @@ public class HeadQuarter {
     }
 
     private void moveTrooper(Trooper trooper, Position target) {
-        if (trooper == null) throw new IllegalArgumentException("Trooper must not be null");
+//        if (trooper == null) throw new IllegalArgumentException("Trooper must not be null");
+        Objects.requireNonNull(trooper, "Trooper must not be null.");
         trooper.changePosition(target);
     }
 }

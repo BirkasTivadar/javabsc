@@ -15,10 +15,13 @@ Gyakorlati feladat - Katonák
         Mely metódusoknak van és melyeknek nincs visszahatása?
 */
 
+import java.util.Objects;
+
 public record Position(double posX, double posY) {
 
     public double distanceFrom(Position position) {
-        if (position == null) throw new IllegalArgumentException("The position must not be null");
+//        if (position == null) throw new IllegalArgumentException("The position must not be null");
+        Objects.requireNonNull(position, "The position must not be null");
         return Math.sqrt(Math.pow(posX - position.posX(), 2) + Math.pow(posY - position.posY(), 2));
     }
 }

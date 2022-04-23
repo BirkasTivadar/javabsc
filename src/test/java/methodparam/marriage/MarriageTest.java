@@ -23,7 +23,7 @@ class MarriageTest {
         marriage.getMarried(woman, man);
 
         assertEquals("Kiss-Nagy Rozália", woman.getName());
-        assertEquals(4, man.getRegisterDates().size());
+        assertEquals(4, man.registerDates().size());
         assertEquals(LocalDate.now(), woman.getRegisterDates().get(1).date());
     }
 }

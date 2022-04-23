@@ -15,7 +15,7 @@ public class Marriage {
     }
 
     private void setMarriedName(Woman woman, Man man) {
-        String preName = man.getName().split(" ")[0];
+        String preName = man.name().split(" ")[0];
         woman.setName(preName + "-" + woman.getName());
     }
 

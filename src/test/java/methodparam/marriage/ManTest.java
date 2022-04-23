@@ -15,8 +15,8 @@ class ManTest {
         RegisterDate registerDate = new RegisterDate("születés ideje", LocalDate.of(1983, 10, 22));
         Man man = new Man("Kiss József", new ArrayList<>(List.of(registerDate)));
 
-        assertEquals("Kiss József", man.getName());
-        assertEquals(1, man.getRegisterDates().size());
-        assertEquals(LocalDate.of(1983, 10, 22), man.getRegisterDates().get(0).date());
+        assertEquals("Kiss József", man.name());
+        assertEquals(1, man.registerDates().size());
+        assertEquals(LocalDate.of(1983, 10, 22), man.registerDates().get(0).date());
     }
 }
