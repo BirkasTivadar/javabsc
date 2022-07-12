@@ -9,7 +9,6 @@ public boolean isEarlier(Time time)
 public boolean isEarlier(int hours, int minutes, int seconds)
 */
 
-
 public record Time(int hours, int minutes, int seconds) {
 
     private int timeInSeconds() {
