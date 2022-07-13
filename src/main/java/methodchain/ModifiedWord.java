@@ -8,7 +8,6 @@ Gyakorlati feladat - Szó módosítása
         legyen a visszatérési érték!
         Írd meg a tesztesetet is a metódus működésének tesztelésére!
 */
-
 public class ModifiedWord {
     public String modify(String str) {
         return String.valueOf(str.charAt(0)).toUpperCase().concat("x").concat(String.valueOf(str.charAt(2)).toUpperCase()).concat("y");

@@ -6,7 +6,6 @@ Gyakorlati feladat - Szöcske
         A Grasshopper osztályban modellezd az egyik lehetséges megoldást! Legyen az osztálynak egy int position attribútuma, valamint egy Grasshopper hopOnce(Direction direction) metódusa, amellyel a szöcske egy pozitív vagy negatív irányú ugrást tud tenni. A Direction egy enum legyen, POSITIVE és NEGATIVE értékekkel! Ezenkívül pedig legyen egy void moveFromZeroToThreeWithFiveHops() metódus is az osztályban, amely 5 ugrással eljuttatja a szöcskét a feladatkiírásban szereplő módon a +3-as pozícióra!
         Írd meg a teszteseteket is mindkét metódus működésének tesztelésére!
 */
-
 public class Grasshopper {
 
     private int position;

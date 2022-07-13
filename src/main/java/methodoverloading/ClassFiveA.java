@@ -9,7 +9,6 @@ Gyakorlati feladat - Ki felel ma?
         A Number enumnál vedd fel minden egyes felsoroló példány számértékét is attribútumként (int value), mert szükséged lesz rá!
 */
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
