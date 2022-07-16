@@ -3,7 +3,6 @@ A FruitsMain osztály main() metódusában példányosítsd le az összes osztá
 */
 
 package introinheritance.fruit;
-
 public class FruitsMain {
 
     public static void main(String[] args) {
