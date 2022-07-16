@@ -47,7 +47,7 @@ public class SimpleTime {
         return minutes;
     }
 
-    public int getTimeInMinutes() {
+    private int getTimeInMinutes() {
         return hours * 60 + minutes;
     }
 

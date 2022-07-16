@@ -34,7 +34,7 @@ public class BusTimeTable {
     }
 
     public SimpleTime getNextBus(SimpleTime actual) {
-      Optional<SimpleTime> result = timeTable.stream().filter(st -> st.getTimeInMinutes() > actual.getTimeInMinutes()).findFirst();
+      Optional<SimpleTime> result = timeTable.stream().filter(st -> st.getDifference(actual) > 0).findFirst();
       if(result.isPresent()) return result.get();
       else throw new IllegalStateException("No more buses today!");
     }
