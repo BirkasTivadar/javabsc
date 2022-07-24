@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Zoo {
 
-    private List<Animal> animals;
+    private final List<Animal> animals;
 
     public Zoo(List<Animal> animals) {
         this.animals = new ArrayList<>(animals);

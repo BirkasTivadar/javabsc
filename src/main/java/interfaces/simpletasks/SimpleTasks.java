@@ -22,7 +22,7 @@ import java.util.List;
 
 public class SimpleTasks implements Runnable {
 
-    private List<String> tasks;
+    private final List<String> tasks;
 
     public SimpleTasks(List<String> tasks) {
         this.tasks = new ArrayList<>(tasks);
