@@ -24,7 +24,6 @@ class ArcherTest {
         Archer offender = new Archer(new Point(0, 0), random);
         Character defender = new Archer(new Point(12, 0), random);
         while (defender.getHitPoint() > 0) {
-            System.out.println(defender.getHitPoint());
             offender.secondaryAttack(defender);
         }
 
