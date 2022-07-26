@@ -1,0 +1,18 @@
+/*
+ExtraLargeBox, amely XL méretű és 5000 Ft-ért juttatják célba.
+*/
+
+package interfacedependencyinversion.box;
+
+public class ExtraLargeBox implements Box {
+
+    @Override
+    public Size getSize() {
+        return Size.XL;
+    }
+
+    @Override
+    public int getPrice() {
+        return 5000;
+    }
+}
