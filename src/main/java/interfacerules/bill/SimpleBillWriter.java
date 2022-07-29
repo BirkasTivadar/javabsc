@@ -14,14 +14,16 @@ public class SimpleBillWriter implements BillWriter {
 
     @Override
     public String writeBill(List<String> billItems) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (String str : billItems) {
             String[] strArr = str.split(";");
             String productName = strArr[0];
             int price = Integer.parseInt(strArr[1]);
             int amount = Integer.parseInt(strArr[2]);
-            result += String.format("%s, %d * %d = %d Ft\n", productName, amount, price, price * amount);
+            result.append(String.format("%s, %d * %d = %d Ft\n", productName, amount, price, price * amount));
         }
-        return result;
+        return result.toString();
     }
+
+
 }
